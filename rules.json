@@ -1,0 +1,718 @@
+{
+  "rules": [
+        {
+            "name": "season_summer",
+            "conditions" :[
+            {
+                "attribute" : {
+                    "name" : "season",
+                    "operator": "eq",
+                    "value": 1
+                }
+            }],
+            "consequences" : [
+                {
+                    "method": "evaluate_season",
+                    "args" : [1]
+                }
+            ]
+        },
+        {
+            "name": "season_autum",
+            "conditions" :[
+            {
+                "attribute" : {
+                    "name" : "season",
+                    "operator": "eq",
+                    "value": 2
+                }
+            }],
+            "consequences" : [
+                {
+                    "method": "evaluate_season",
+                    "args" : [2]
+                }
+            ]
+        },
+        {
+            "name": "season_winter",
+            "conditions" :[
+            {
+                "attribute" : {
+                    "name" : "season",
+                    "operator": "eq",
+                    "value": 3
+                }
+            }],
+            "consequences" : [
+                {
+                    "method": "evaluate_season",
+                    "args" : [3]
+                }
+            ]
+        },
+        {
+          "name": "season_spring",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "season",
+                      "operator": "eq",
+                      "value": 4
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_season",
+                  "args" : [4]
+              }
+          ]
+        },
+      {
+          "name": "temperature_warm",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "temperature",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_temperature",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "temperature_tempered",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "temperature",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_temperature",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "water_state_running",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "water_state",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_water_state",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "water_state_cloudy",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "water_state",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_water_state",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "water_state_stagnant",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "water_state",
+                      "operator": "eq",
+                      "value": 3
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_water_state",
+                  "args" : [3]
+              }
+          ]
+      },
+      {
+          "name": "water_state_normal",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "water_state",
+                      "operator": "eq",
+                      "value": 4
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_water_state",
+                  "args" : [4]
+              }
+          ]
+      },
+      {
+          "name": "water_state_calm",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "water_state",
+                      "operator": "eq",
+                      "value": 5
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_water_state",
+                  "args" : [5]
+              }
+          ]
+      },
+      {
+          "name": "fishing_depth_shallow",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "fishing_depth",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_depth",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "fishing_depth_medium",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "fishing_depth",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_depth",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "fishing_depth_large",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "fishing_depth",
+                      "operator": "eq",
+                      "value": 3
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_depth",
+                  "args" : [3]
+              }
+          ]
+      },
+      {
+          "name": "time_morning",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "time",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_time",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "time_midday",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "time",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_time",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "time_noon",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "time",
+                      "operator": "eq",
+                      "value": 3
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_time",
+                  "args" : [3]
+              }
+          ]
+      },
+      {
+          "name": "time_night",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "time",
+                      "operator": "eq",
+                      "value": 4
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_time",
+                  "args" : [4]
+              }
+          ]
+      },
+      {
+          "name": "time_dawn",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "time",
+                      "operator": "eq",
+                      "value": 5
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_time",
+                  "args" : [5]
+              }
+          ]
+      },
+      {
+          "name": "fish_size_small",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "fish_size",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_fish_size",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "fish_size_medium",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "fish_size",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_fish_size",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "fish_size_large",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "fish_size",
+                      "operator": "eq",
+                      "value": 3
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_fish_size",
+                  "args" : [3]
+              }
+          ]
+      },
+      {
+          "name": "bait_mojarra",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "bait",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_bait",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "bait_worm",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "bait",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_bait",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "bait_catfish",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "bait",
+                      "operator": "eq",
+                      "value": 3
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_bait",
+                  "args" : [3]
+              }
+          ]
+      },
+      {
+          "name": "bait_eel",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "bait",
+                      "operator": "eq",
+                      "value": 4
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_bait",
+                  "args" : [4]
+              }
+          ]
+      },
+      {
+          "name": "has_telescopic_rod_true",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "has_telescopic_rod",
+                      "operator": "eq",
+                      "value": true
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_has_telescopic_rod",
+                  "args" : [true]
+              }
+          ]
+      },
+      {
+          "name": "has_telescopic_rod_false",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "has_telescopic_rod",
+                      "operator": "eq",
+                      "value": false
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_has_telescopic_rod",
+                  "args" : [false]
+              }
+          ]
+      },
+      {
+          "name": "reel_size_small",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "reel_size",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_reel_size",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "reel_size_medium",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "reel_size",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_reel_size",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "reel_size_large",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "reel_size",
+                      "operator": "eq",
+                      "value": 3
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_reel_size",
+                  "args" : [3]
+              }
+          ]
+      },
+      {
+          "name": "has_reel_stop_true",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "has_reel_stop",
+                      "operator": "eq",
+                      "value": true
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_has_reel_stop",
+                  "args" : [true]
+              }
+          ]
+      },
+      {
+          "name": "has_reel_stop_false",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "has_reel_stop",
+                      "operator": "eq",
+                      "value": false
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_has_reel_stop",
+                  "args" : [false]
+              }
+          ]
+      },
+      {
+          "name": "has_reel_stop_true",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "has_reel_stop",
+                      "operator": "eq",
+                      "value": true
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_has_reel_stop",
+                  "args" : [true]
+              }
+          ]
+      },
+      {
+          "name": "line_diameter_02",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "line_diameter",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_line_diameter",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "line_diameter_03",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "line_diameter",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_line_diameter",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "line_diameter_04",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "line_diameter",
+                      "operator": "eq",
+                      "value": 3
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_line_diameter",
+                  "args" : [3]
+              }
+          ]
+      },
+      {
+          "name": "has_plumb_true",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "has_plumb",
+                      "operator": "eq",
+                      "value": true
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_has_plumb",
+                  "args" : [true]
+              }
+          ]
+      },
+      {
+          "name": "has_plumb_false",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "has_plumb",
+                      "operator": "eq",
+                      "value": false
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_has_plumb",
+                  "args" : [false]
+              }
+          ]
+      },
+      {
+          "name": "plumb_weight_small",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "plumb_weight",
+                      "operator": "eq",
+                      "value": 1
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_plumb_weight",
+                  "args" : [1]
+              }
+          ]
+      },
+      {
+          "name": "plumb_weight_medium",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "plumb_weight",
+                      "operator": "eq",
+                      "value": 2
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_plumb_weight",
+                  "args" : [2]
+              }
+          ]
+      },
+      {
+          "name": "plumb_weight_large",
+          "conditions" :[
+              {
+                  "attribute" : {
+                      "name" : "plumb_weight",
+                      "operator": "eq",
+                      "value": 3
+                  }
+              }],
+          "consequences" : [
+              {
+                  "method": "evaluate_plumb_weight",
+                  "args" : [3]
+              }
+          ]
+      }
+  ]
+}
